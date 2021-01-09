@@ -71,7 +71,7 @@ systemctl enable --now kubelet
 ## On KMaster
 ##### Initialize Kubernetes Cluster
 ```
-kubeadm init --apiserver-advertise-address=172.16.1.101
+kubeadm init --apiserver-advertise-address=172.16.1.101 --pod-network-cidr=192.168.0.0/16
 ```
 ##### Deploy Calico pod network (CNI)
 ```
