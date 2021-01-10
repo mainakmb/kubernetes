@@ -40,6 +40,7 @@ sudo yum update -y && sudo yum install -y containerd.io
 sudo mkdir -p /etc/containerd
 sudo containerd config default > /etc/containerd/config.toml
 sudo systemctl restart containerd
+sudo systemctl enable --now containerd
 ```
 ### Kubernetes Setup
 ##### Add yum repository
