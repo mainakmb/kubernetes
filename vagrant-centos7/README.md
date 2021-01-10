@@ -15,3 +15,5 @@ https://www.vagrantup.com/downloads.html
 https://www.virtualbox.org/wiki/Downloads
 ```
 
+#### Installing Metrics Server
+As we have our cluster in VM baremetal and so the config file for setting up metrics server is __metrics-server.yaml__
