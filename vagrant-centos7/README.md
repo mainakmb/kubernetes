@@ -24,4 +24,4 @@ kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets
 ```
 Use the token output from kubectl get secret command for dashboard login
 #### Installing Metrics Server
-As we have our cluster in VM baremetal and so the config file for setting up metrics server is __metrics-server.yaml__
+As I have my cluster in VM baremetal and so the config file for setting up metrics server is __metrics-server.yaml__
