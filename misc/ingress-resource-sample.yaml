@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-resource
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/affinity-mode: "persistent"
+    nginx.ingress.kubernetes.io/session-cookie-name: "auth_cookie"
+    nginx.ingress.kubernetes.io/session-cookie-expires: "14400"
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "14400"
+    nginx.ingress.kubernetes.io/session-cookie-change-on-failure: "false"
+    nginx.ingress.kubernetes.io/limit-connections: '2'
+    nginx.ingress.kubernetes.io/limit-rpm: '60'
+
+spec:
+  rules:
+  - host: kube.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: mysvc
+          servicePort: 8080
+        path: /
+  tls:
+  - hosts:
+    - kube.example.com
+    secretName: kube-tls
