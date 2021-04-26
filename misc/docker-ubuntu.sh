@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Erase old versions
 echo "**[Task 1]** Erasing old Docker version"
 apt-get remove -qq docker docker-engine docker.io containerd runc >/dev/null 2>&1
