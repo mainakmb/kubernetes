@@ -24,5 +24,3 @@ apt-get update -qq >/dev/null 2>&1
 apt-get install -qq docker-ce docker-ce-cli containerd.io >/dev/null 2>&1
 systemctl start docker
 systemctl enable docker
-usermod -aG docker $USER
-newgrp docker
