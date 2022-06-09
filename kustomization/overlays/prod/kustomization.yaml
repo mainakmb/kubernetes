@@ -8,3 +8,4 @@ commonLabels:
 
 patches:
   - "service-port.yaml"
+  - "replica-count.yaml"
