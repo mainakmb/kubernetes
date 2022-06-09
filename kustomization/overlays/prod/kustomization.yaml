@@ -1,0 +1,10 @@
+bases:
+  - "../../base"
+
+namePrefix: prod-
+
+commonLabels:
+  env: prod
+
+patches:
+  - "service-port.yaml"
